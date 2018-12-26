@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+
 @Component({
   selector: 'app-order',
   templateUrl: './order.component.html',
@@ -13,7 +14,11 @@ export class OrderComponent implements OnInit {
   @Input()
   amount: number;//股票数量
 
-  constructor() { }
+  constructor() {
+    setInterval(() => {
+      this.stockCode = "Apple";
+    }, 3000);
+  }
 
   ngOnInit() {
   }
